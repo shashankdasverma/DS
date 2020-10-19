@@ -41,8 +41,7 @@ int deQueue() {
       front = -1;
       rear = -1;
     } 
-    // Q has only one element, so we reset the 
-    // queue after dequeing it. ?
+   
     else {
       front = (front + 1) % SIZE;
     }
@@ -68,7 +67,7 @@ void display() {
 }
 
 int main() {
-  // Fails because front = -1
+  
   deQueue();
 
   enQueue(1);
@@ -76,8 +75,6 @@ int main() {
   enQueue(3);
   enQueue(4);
   enQueue(5);
-
-  // Fails to enqueue because front == 0 && rear == SIZE - 1
   enQueue(6);
 
   display();
@@ -87,8 +84,6 @@ int main() {
 
   enQueue(7);
   display();
-
-  // Fails to enqueue because front == rear + 1
   enQueue(8);
 
   return 0;
